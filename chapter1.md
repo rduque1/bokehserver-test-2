@@ -120,7 +120,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:BokehServerExercise lang:python xp:100 skills:1  key:117414fadb
+--- type:NormalExercise lang:python xp:100 skills:1  key:117414fadb
 ## Bokeh Server
 
 
