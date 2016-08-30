@@ -123,7 +123,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:117414fadb
 ## Bokeh Server
 
-
+testest
 Blabla bokeh Server
 
 *** =instructions
