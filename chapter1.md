@@ -119,3 +119,58 @@ test_function("matplotlib.pyplot.show")
 
 success_msg("Great work!")
 ```
+
+--- type:BokehServerExercise lang:python xp:100 skills:1 
+## Bokeh Server
+
+
+Blabla bokeh Server
+
+*** =instructions
+Plot the plot with bokeh server
+
+*** =hint
+- plot
+- plot again
+
+*** =pre_exercise_code
+```{python}
+#
+```
+
+*** =sample_code
+```{python}
+import numpy as np
+from numpy import pi
+from bokeh.driving import cosine
+from bokeh.plotting import figure, curdoc
+
+x = np.linspace(0, 4*pi, 80)
+y = np.sin(x)
+
+p = figure()
+r1 = p.line([0, 4*pi], [-1, 1], color="firebrick")
+r2 = p.line(x, y, color="navy", line_width=4)
+
+curdoc().add_root(p)
+
+@cosine(w=0.03)
+def update(step):
+    # updating a single column of the the *same length* is OK
+    r2.data_source.data["y"] = y * step
+    r2.glyph.line_alpha = 1 - 0.8 * abs(step)
+
+curdoc().add_periodic_callback(update, 50)
+
+```
+
+*** =solution
+```{python}
+# 
+```
+
+*** =sct
+```{python}
+#
+```
+
